@@ -24,7 +24,7 @@ function Categories() {
         setCallback(!callback);
       } else {
         const res = await axios.post(
-          "/api/category",
+          "https://still-lake-63515.herokuapp.com/api/category",
           { name: category },
           {
             headers: { Authorization: token },
@@ -46,7 +46,7 @@ function Categories() {
   };
   const deleteCategory = async (id) => {
     try {
-      const res = await axios.delete(`/api/category/${id}`, {
+      const res = await axios.delete(`https://still-lake-63515.herokuapp.com/api/category/${id}`, {
         headers: { Authorization: token },
       });
       setCallback(!callback);

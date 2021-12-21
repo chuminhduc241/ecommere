@@ -9,7 +9,7 @@ function UserApi(token) {
     if (token) {
       const getUser = async () => {
         try {
-          const res = await axios.get("/user/infor", {
+          const res = await axios.get("https://still-lake-63515.herokuapp.com/user/infor", {
             headers: { Authorization: token },
           });
           console.log(res);

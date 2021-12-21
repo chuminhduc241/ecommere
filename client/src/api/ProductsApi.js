@@ -10,7 +10,7 @@ function ProductsApi() {
   const [result, setResult] = useState(0);
   const getProduct = async () => {
     const res = await axios.get(
-      `/api/products?limit=${
+      `https://still-lake-63515.herokuapp.com/api/products?limit=${
         page * 9
       }&${category}&${sort}&title[regex]=${search}`
     );

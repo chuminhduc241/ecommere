@@ -6,7 +6,7 @@ function CategoriesApi() {
   const [callback, setCallback] = useState(false);
   useEffect(() => {
     const getCategories = async () => {
-      const res = await axios.get("/api/category");
+      const res = await axios.get("https://still-lake-63515.herokuapp.com/api/category");
       setcategories(res.data);
     };
     getCategories();
