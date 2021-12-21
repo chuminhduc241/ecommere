@@ -14,9 +14,7 @@ export const DataProvider = ({ children }) => {
     categoriesApi: CategoriesApi(),
   };
   const refreshToken = async () => {
-    const res = await axios.get(
-      "https://still-lake-63515.herokuapp.com/user/refresh_token"
-    );
+    const res = await axios.get("/user/refresh_token");
     setToken(res.data.accesstoken);
   };
   useEffect(() => {
