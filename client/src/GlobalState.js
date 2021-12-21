@@ -15,7 +15,7 @@ export const DataProvider = ({ children }) => {
   };
   const refreshToken = async () => {
     const res = await axios.get(
-      "https://still-lake-63515.herokuapp.com//user/refresh_token"
+      "https://still-lake-63515.herokuapp.com/user/refresh_token"
     );
     setToken(res.data.accesstoken);
   };
