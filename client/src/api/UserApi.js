@@ -31,7 +31,7 @@ function UserApi(token) {
     if (check) {
       setCart([...cart, { ...product, quantity: 1 }]);
       await axios.patch(
-        "/user/addcart",
+        "https://still-lake-63515.herokuapp.com/user/addcart",
         { cart: [...cart, { ...product, quantity: 1 }] },
         {
           headers: { Authorization: token },
